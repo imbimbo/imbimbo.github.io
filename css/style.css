@@ -299,12 +299,12 @@ input[type=submit]:hover {
   }
 
   p {
-    font-size: 24px;
+    font-size: 22px;
     text-align: center;
   }
 
   b {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   #underContruction {
@@ -329,7 +329,7 @@ input[type=submit]:hover {
   }
 
   .container {
-    margin-top: 50px;
+    margin-top: 30px;
     width: 90%;
     height: auto;
   }
