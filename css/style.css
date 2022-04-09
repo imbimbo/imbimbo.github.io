@@ -30,7 +30,7 @@ section {
 }
 
 #about {
-  background-color: #000000;
+  background-color: #ffffff;
 }
 
 #projects {
@@ -38,7 +38,7 @@ section {
 }
 
 #contact {
-  background-color: #00c6bb;
+  background-color: #FF0066;
 }
 
 /*------MENU------*/
@@ -170,7 +170,7 @@ h1 {
 
 p {
   font-family: 'Montserrat', sans-serif;
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 46px;
   font-weight: 100;
   text-align: right;
@@ -229,7 +229,7 @@ input[type=text], select, textarea {
 }
 
 input[type=submit] {
-  background-color: #ff0066;
+  background-color: #00c6bb;
   color: white;
   padding: 12px 20px;
   border: none;
