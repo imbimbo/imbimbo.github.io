@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:40");
+.hello {
+  color: #FFF;
+  font-family: "Open Sans", sans-serif;
+  font-size: 80px;
+  text-align: center;
+  padding-top: 300px;
+  white-space: nowrap;
+}
+
+.blinking-cursor {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-animation: blink 1s steps(2, start) infinite;
+          animation: blink 1s steps(2, start) infinite;
+}
+
+@-webkit-keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hello {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .hello {
+    font-size: 20px;
+  }
+}
+/*# sourceMappingURL=hello.css.map */

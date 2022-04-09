@@ -30,11 +30,11 @@ section {
 }
 
 #about {
-  background-color: #Ff0066;
+  background-color: #000000;
 }
 
 #projects {
-  background-color: #7030a0;
+  background-color: #000000;
 }
 
 #contact {
@@ -89,7 +89,11 @@ nav {
 }
 
 #homeBtn:hover {
-  text-shadow:
+  text-shadow:0px 0px 4px #777777;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .nav-ul li {
@@ -113,8 +117,11 @@ nav {
 }
 
 /*------HOME------*/
+
+
+/*------ABOUT ME------*/
 #perfilImg {
-  height: 150px;
+  height: 250px;
   width: auto;
   margin-top: 100px;
 }
@@ -134,7 +141,7 @@ nav {
 
 .socialMedia a {
   text-decoration: none;
-  font-size: 20px;
+  font-size: 40px;
   margin: 5px;
 }
 
@@ -164,22 +171,14 @@ h1 {
 p {
   font-family: 'Montserrat', sans-serif;
   color: white;
-  font-size: 36px;
+  font-size: 46px;
   font-weight: 100;
   text-align: right;
-  line-height: 44px;
+  line-height: 54px;
 }
 
 b {
-  font-size: 38px;
-}
-
-/*------ABOUT ME------*/
-#underContruction {
-  height: 400px;
-  width: auto;
-  display: block;
-  margin: auto;
+  font-size: 48px;
 }
 
 /*------PROJECTS------*/
@@ -207,10 +206,10 @@ h2 {
   transition: 1s;
   margin: 15px;
   padding: 0px;
-  border: 2px solid white;
-  border-radius: 2px;
+  border: 10px solid rgb(255, 255, 255);
+  border-radius: 5px;
   width: 275px;
-  height: auto;
+  height: 500px;
 }
 
 .gallery img:hover {
@@ -303,6 +302,10 @@ input[type=submit]:hover {
     margin-right: auto;
   }
 
+  .socialMedia a {
+    font-size: 20px;
+  }
+
   p {
     font-size: 22px;
     line-height: 40px;
@@ -328,6 +331,7 @@ input[type=submit]:hover {
     width: 130px;
     padding: 0px;
     margin: 5px;
+    border: 5px solid rgb(255, 255, 255);
   }
 
   .gallery img:hover {
@@ -343,6 +347,7 @@ input[type=submit]:hover {
 
 /*------MOBILE VERSION SMALLer------*/
 @media screen and (max-width: 370px) {
+
   h1 {
     font-size: 36px;
   }
