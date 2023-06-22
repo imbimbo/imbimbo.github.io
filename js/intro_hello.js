@@ -16,7 +16,7 @@ window.onload = async function init () {
     await sleep(500)
     await node.type('a coder')
     await sleep(2000)
-    await node.delete('I am a coder')
+    await node.delete('I am a developer')
   }
 }
 
