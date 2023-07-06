@@ -102,7 +102,7 @@ body.lb-disable-scrolling {
   float: left;
   background: url(../images/prev.png) left 48% no-repeat;
   filter: alpha(Opacity=0);
-  opacity: 0;
+  opacity: 0.2;
   -webkit-transition: opacity .6s;
   -moz-transition: opacity .6s;
   -o-transition: opacity .6s;
@@ -120,7 +120,7 @@ body.lb-disable-scrolling {
   float: right;
   background: url(../images/next.png) right 48% no-repeat;
   filter: alpha(Opacity=0);
-  opacity: 0;
+  opacity: 0.2;
   -webkit-transition: opacity .6s;
   -moz-transition: opacity .6s;
   -o-transition: opacity .6s;
@@ -152,16 +152,15 @@ body.lb-disable-scrolling {
 }
 
 .lb-data .lb-details {
-  width: 85%;
-  float: left;
-  text-align: left;
+  width: 100%;
+  text-align: center;
   line-height: 1.1em
 }
 
 .lb-data .lb-caption {
   font-family: "Open Sans", sans-serif;
-  font-size: 23px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 500;
   line-height: 1em
 }
 
@@ -175,26 +174,4 @@ body.lb-disable-scrolling {
   padding-bottom: 1em;
   font-size: 0px;
   color: #999
-}
-
-.lb-data .lb-close {
-  display: block;
-  float: right;
-  width: 30px;
-  height: 30px;
-  background: url(../images/close.png) top right no-repeat;
-  text-align: right;
-  outline: 0;
-  filter: alpha(Opacity=70);
-  opacity: .7;
-  -webkit-transition: opacity .2s;
-  -moz-transition: opacity .2s;
-  -o-transition: opacity .2s;
-  transition: opacity .2s
-}
-
-.lb-data .lb-close:hover {
-  cursor: pointer;
-  filter: alpha(Opacity=100);
-  opacity: 1
 }

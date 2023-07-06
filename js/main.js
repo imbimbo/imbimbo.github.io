@@ -36,7 +36,7 @@ $(document).ready(function() {
       // The number (600) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top
-      }, 600, function() {
+      }, 100, function() {
 
         window.location.hash = hash;
       });

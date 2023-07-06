@@ -5,18 +5,12 @@ window.onload = async function init () {
   node.innerText = ""
   
   while (true) {
-    await node.type('Hello, ')
+    await node.type('Hey, ')
     await sleep(1000)
-    await node.type('World!')
+    await node.type("I'm Felipe!")
     await sleep(2000)
-    await node.delete('Hello, World!')
-    await node.type('I am Felipe')
+    await node.delete("Hey, I'm Felipe!")
     await sleep(2000)
-    await node.delete('Felipe')
-    await sleep(500)
-    await node.type('a coder')
-    await sleep(2000)
-    await node.delete('I am a developer')
   }
 }
 
