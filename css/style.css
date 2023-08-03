@@ -14,7 +14,13 @@ html {
 
 body {}
 
-div, section, span, ul, li, a, header {
+div,
+section,
+span,
+ul,
+li,
+a,
+header {
   box-sizing: border-box;
 }
 
@@ -89,7 +95,7 @@ nav {
 }
 
 #homeBtn:hover {
-  text-shadow:0px 0px 4px #777777;
+  text-shadow: 0px 0px 4px #777777;
   -moz-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
   -webkit-transition: all 0.2s ease-in;
@@ -191,9 +197,12 @@ h2 {
   padding: 50px;
 }
 
-#slidy-container { 
-  width: 70%; margin: 0 auto; overflow: hidden;
+#slidy-container {
+  width: 60%;
+  margin: 0 auto;
+  overflow: hidden;
 }
+
 
 /*------CONTACT------*/
 #contact h2 {
@@ -201,7 +210,9 @@ h2 {
 
 }
 
-input[type=text], select, textarea {
+input[type=text],
+select,
+textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #000000;
@@ -226,6 +237,7 @@ input[type=submit]:hover {
 }
 
 .container {
+  border: 2px solid #000000;
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
@@ -236,11 +248,11 @@ input[type=submit]:hover {
 
 /*------MOBILE VERSION------*/
 @media screen and (max-width: 768px) {
-  
+
   html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
   }
-  
+
   nav {
     position: fixed;
   }
@@ -300,27 +312,6 @@ input[type=submit]:hover {
     font-size: 24px;
   }
 
-  #underContruction {
-    width: 300px;
-    height: auto;
-  }
-
-  .gallery {
-    padding: 10px 10px 10px 10px;
-    justify-content: space-around
-  }
-
-  .gallery img {
-    height: 110px;
-    width: 130px;
-    padding: 0px;
-    margin: 5px;
-    border: 5px solid rgb(255, 255, 255);
-  }
-
-  .gallery img:hover {
-    transform: none;
-  }
 
   .container {
     margin-top: 30px;
@@ -354,24 +345,6 @@ input[type=submit]:hover {
     font-size: 22px;
   }
 
-  ul#album-fotos {
-    padding: 5px;
-  }
-
-  ul#album-fotos li {
-    flex: 35%;
-    width: 115px;
-    height: 115px;
-  }
-
-  ul#album-fotos li span {
-    opacity: 0;
-    color: white;
-    background-color: transparent;
-    font-size: 9pt;
-    line-height: 190px;
-    padding: 2px;
-  }
 
   .container {
     margin-top: -10px;

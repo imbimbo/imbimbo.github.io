@@ -1,0 +1,81 @@
+.hr {
+  width: 100%;
+  height: 0px;
+  display: block;
+  position: relative;
+  margin-bottom: 0em;
+}
+
+.hr:after, .hr:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 50%;
+  left: 0;
+}
+
+.hr:before {
+  background: -webkit-gradient(linear, left top, right top, from(#f7f7f7), color-stop(50%, #f7f7f7), color-stop(50%, transparent), to(transparent));
+  background: linear-gradient(90deg, #f7f7f7 0%, #f7f7f7 50%, transparent 50%, transparent 100%);
+  background-size: 15px;
+  background-position: center;
+  z-index: 1;
+}
+
+.hr:after {
+  -webkit-transition: opacity 0.3s ease, -webkit-animation 0.3s ease;
+  transition: opacity 0.3s ease, -webkit-animation 0.3s ease;
+  transition: opacity 0.3s ease, animation 0.3s ease;
+  transition: opacity 0.3s ease, animation 0.3s ease, -webkit-animation 0.3s ease;
+  background: -webkit-gradient(linear, left top, right top, color-stop(5%, #62efab), color-stop(15%, #F2EA7D), color-stop(25%, #F2EA7D), color-stop(35%, #FF8797), color-stop(45%, #FF8797), color-stop(55%, #e1a4f4), color-stop(65%, #e1a4f4), color-stop(75%, #82fff4), color-stop(85%, #82fff4), color-stop(95%, #62efab));
+  background: linear-gradient(to right, #62efab 5%, #F2EA7D 15%, #F2EA7D 25%, #FF8797 35%, #FF8797 45%, #e1a4f4 55%, #e1a4f4 65%, #82fff4 75%, #82fff4 85%, #62efab 95%);
+  background-size: 200%;
+  background-position: 0%;
+  -webkit-animation: bar 15s linear infinite;
+          animation: bar 15s linear infinite;
+}
+
+@-webkit-keyframes bar {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+@keyframes bar {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+.hr.anim:before {
+  background: -webkit-gradient(linear, left top, right top, from(#f7f7f7), color-stop(5%, #f7f7f7), color-stop(5%, transparent), color-stop(10%, transparent), color-stop(10%, #f7f7f7), color-stop(15%, #f7f7f7), color-stop(15%, transparent), color-stop(20%, transparent), color-stop(20%, #f7f7f7), color-stop(25%, #f7f7f7), color-stop(25%, transparent), color-stop(30%, transparent), color-stop(30%, #f7f7f7), color-stop(35%, #f7f7f7), color-stop(35%, transparent), color-stop(40%, transparent), color-stop(40%, #f7f7f7), color-stop(45%, #f7f7f7), color-stop(45%, transparent), color-stop(50%, transparent), color-stop(50%, #f7f7f7), color-stop(55%, #f7f7f7), color-stop(55%, transparent), color-stop(60%, transparent), color-stop(60%, #f7f7f7), color-stop(65%, #f7f7f7), color-stop(65%, transparent), color-stop(70%, transparent), color-stop(70%, #f7f7f7), color-stop(75%, #f7f7f7), color-stop(75%, transparent), color-stop(80%, transparent), color-stop(80%, #f7f7f7), color-stop(85%, #f7f7f7), color-stop(85%, transparent), color-stop(90%, transparent), color-stop(90%, #f7f7f7), color-stop(95%, #f7f7f7), color-stop(95%, transparent), to(transparent));
+  background: linear-gradient(90deg, #f7f7f7 0%, #f7f7f7 5%, transparent 5%, transparent 10%, #f7f7f7 10%, #f7f7f7 15%, transparent 15%, transparent 20%, #f7f7f7 20%, #f7f7f7 25%, transparent 25%, transparent 30%, #f7f7f7 30%, #f7f7f7 35%, transparent 35%, transparent 40%, #f7f7f7 40%, #f7f7f7 45%, transparent 45%, transparent 50%, #f7f7f7 50%, #f7f7f7 55%, transparent 55%, transparent 60%, #f7f7f7 60%, #f7f7f7 65%, transparent 65%, transparent 70%, #f7f7f7 70%, #f7f7f7 75%, transparent 75%, transparent 80%, #f7f7f7 80%, #f7f7f7 85%, transparent 85%, transparent 90%, #f7f7f7 90%, #f7f7f7 95%, transparent 95%, transparent 100%);
+  background-size: 150px;
+  background-position: center;
+  z-index: 1;
+  -webkit-animation: bar 120s linear infinite;
+          animation: bar 120s linear infinite;
+}
+
+.hr.anim:hover:before {
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+}
+
+.hr.anim:hover:after {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+body {
+  font-family: Lato;
+  font-weight: 100;
+}
+/*# sourceMappingURL=divider.css.map */
