@@ -6,7 +6,7 @@ $barsize: 15px;
 .hr {
 
 width: 100%;
-height: 0px;
+height: 3px;
 display: block;
 position: relative;
 margin-bottom: 0em;
@@ -18,7 +18,7 @@ margin-bottom: 0em;
     position: absolute;
 
     width: 100%;
-    height: 1px;
+    height: 3px;
     bottom: 50%;
     left: 0;
 
@@ -39,7 +39,7 @@ margin-bottom: 0em;
 
     background: linear-gradient(
         to right, 
-        #62efab 5%, 
+     /* #62efab 5%, 
         #F2EA7D 15%, 
         #F2EA7D 25%, 
         #FF8797 35%, 
@@ -48,7 +48,18 @@ margin-bottom: 0em;
         #e1a4f4 65%, 
         #82fff4 75%, 
         #82fff4 85%, 
-        #62efab 95%);
+        #62efab 95%);*/
+
+        #000000 5%, 
+        #444444 15%, 
+        #676767 25%, 
+        #adadad 35%, 
+        #d6d6d6 45%, 
+        #acacac 55%, 
+        #9c9c9c 65%, 
+        #5d5d5d 75%, 
+        #3f3f3f 85%, 
+        #000000 95%);
 
     background-size: 200%;
     background-position: 0%;
@@ -111,10 +122,3 @@ margin-bottom: 0em;
 }
 }
 
-
-body {
-
-font-family: Lato;
-font-weight: 100;
-
-}
