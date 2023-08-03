@@ -34,11 +34,11 @@ section {
 }
 
 #projects {
-  background-color: #000000;
+  background-color: #ffffff;
 }
 
 #contact {
-  background-color: #00c6bb;
+  background-color: #ffffff;
 }
 
 /*------MENU------*/
@@ -184,7 +184,7 @@ b {
 h2 {
   font-family: 'Spartan', sans-serif;
   font-size: 30px;
-  color: #ffffff;
+  color: #000000;
   display: flex;
   flex: 2;
   justify-content: center;
@@ -192,27 +192,25 @@ h2 {
 }
 
 .gallery {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  overflow: visible;
-  list-style: none;
-  justify-content: space-around;
-  padding: 10px 50px 10px 50px;
+  display: grid;
+  grid-template-columns: repeat(5, 750px); /* Set the width of each column to 400 pixels */
+  grid-template-rows: 10fr;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  overflow: hidden;
+  height: 475px; /* Set the height of the gallery to 900 pixels */
+  scroll-snap-type: both mandatory;
+  scroll-padding: 1rem;
 }
 
-.gallery img {
-  transition: 1s;
-  margin: 15px;
-  padding: 0px;
-  border: 10px solid rgb(255, 255, 255);
-  border-radius: 5px;
-  width: 200px;
-  height: 300px;
+li {
+  scroll-snap-align: center;
+  display: inline-block;
+  border-radius: 3px;
 }
 
-.gallery img:hover {
-  transform: scale(1.2);
+.active {
+	scroll-snap-type: unset;
 }
 
 /*------CONTACT------*/
