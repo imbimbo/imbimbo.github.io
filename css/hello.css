@@ -2,7 +2,7 @@
 .hello {
   color: #000000;
   font-family: "Open Sans", sans-serif;
-  font-size: 80px;
+  font-size: 60px;
   text-align: center;
   padding-top: 300px;
   white-space: nowrap;
@@ -31,7 +31,7 @@
 
 @media screen and (max-width: 768px) {
   .hello {
-    font-size: 40px;
+    font-size: 36px;
   }
 }
 

@@ -37,7 +37,7 @@ section {
 }
 
 #about {
-  background-color: #f7f7f7;
+  background-color: #000000;
 }
 
 #projects {
@@ -45,7 +45,7 @@ section {
 }
 
 #contact {
-  background-color: #f7f7f7;
+  background-color: #000000;
 }
 
 /*------MENU------*/
@@ -127,27 +127,39 @@ nav {
 
 
 /*------ABOUT ME------*/
+
+#about h2 {
+  color: #ffffff;
+}
+
+.containerAbout {
+  display: flex;
+  flex-direction: row;
+}
+
+.containerPerfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 #perfilImg {
   height: 150px;
   width: auto;
-}
-
-.homeImg {
-  display: flex;
   padding-top: 40px;
-  padding-right: 40px;
-  justify-content: flex-end;
+  padding-bottom: 40px;
 }
 
 .socialMedia {
   display: flex;
   justify-content: flex-end;
-  padding-right: 40px;
+
 }
 
 .socialMedia a {
   text-decoration: none;
-  font-size: 40px;
+  font-size: 30px;
   margin: 5px;
 }
 
@@ -157,35 +169,57 @@ nav {
   transform: scale(1.2);
 }
 
-h1 {
-  font-family: 'Spartan', sans-serif;
-  font-size: 60px;
-  color: #000000;
-  display: flex;
-  flex: 2;
-  justify-content: center;
-  padding: 50px;
-}
-
 .contentHome {
-  display: flex;
-  justify-content: flex-end;
-  padding-left: 50px;
-  padding-right: 40px;
+  padding-left: 20%;
+  padding-right: 20%;
 }
 
 p {
   font-family: 'Montserrat', sans-serif;
-  color: rgb(0, 0, 0);
-  font-size: 40px;
+  color: rgb(255, 255, 255);
+  font-size: 28px;
   font-weight: 100;
-  text-align: right;
-  line-height: 54px;
+  text-align: center;
+  line-height: 50px;
 }
 
 b {
-  font-size: 42px;
+  font-size: 30px;
 }
+
+#mySidenav a {
+  position: absolute; 
+  left: -360px; 
+  transition: 0.3s; 
+  padding: 15px; 
+  width: 400px; 
+  text-align: center;
+  text-decoration: none; 
+  font-size: 30px; 
+  color: rgb(0, 0, 0); 
+  border-radius: 0 20px 20px 0; 
+  font-family: 'Montserrat', sans-serif;
+}
+
+.sidenav i {
+  font-size: 60px;
+  margin: 6px;
+}
+
+#mySidenav a:hover {
+  left: 0; 
+}
+
+#stack1 {
+  top: 160px;
+  background-color: #6cc644;
+}
+
+#stack2 {
+  top: 200px;
+  background-color: #f7f7f7;
+}
+
 
 /*------PROJECTS------*/
 h2 {
@@ -195,7 +229,7 @@ h2 {
   display: flex;
   flex: 2;
   justify-content: center;
-  padding: 50px;
+  padding: 40px;
 }
 
 #slidy-container {
@@ -207,7 +241,7 @@ h2 {
 
 /*------CONTACT------*/
 #contact h2 {
-  color: #000000;
+  color: #ffffff;
 
 }
 
