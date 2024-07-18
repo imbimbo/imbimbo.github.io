@@ -27,7 +27,7 @@
         <i class="fas fa-bars"></i>
       </button>
 
-      <ul class="nav-ul" id="nav-ul">
+      <ul class="nav-ul fade" id="nav-ul">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About Me</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -38,7 +38,7 @@
     </nav>
 
     <!-- HOME PAGE -->
-    <div class="hello">
+    <div class="hello fade">
       <span is="type-async" id="type-text">...</span>
       <span class="blinking-cursor">_</span>
     </div>
@@ -54,17 +54,17 @@
 
       <img src="images/perfil.png" id="perfilImg" alt="">
 
-    
 
-    <div class="contentHome">
 
-      <p>I am an <b>IT</b> passionate and a former<br> <b>mobile developer</b>. Currently mastering <b>Ruby 
+    <div class="contentHome fade">
+
+      <p>I am an <b>IT</b> passionate and a former<br> <b>mobile developer</b>. Currently mastering <b>Ruby
         On Rails</b> but still finding my way as a <b>developer</b>.</p>
 
     </div>
-  
 
-    <div class="socialMedia">
+
+    <div class="socialMedia fade">
 
       <a href="https://linkedin.com/in/felipe-imbimbo-575b4911b" target="_blank">
         <i class="fab fa-linkedin" style="color:#0e76a8"></i></a>
@@ -72,7 +72,7 @@
         <i class="fab fa-github-square" style="color:#6cc644"></i></a>
       </div>
     </div>
-    
+
   </div>
 
   <div id="mySidenav" class="sidenav">
@@ -87,9 +87,9 @@
       <i class="devicon-rails-plain-wordmark colored"></i>
       <i class="devicon-javascript-plain colored"></i>
       <i class="devicon-postgresql-plain colored"></i>
-      
+
     </a>
-  
+
   </section>
 
   <!-- PROJECTS PAGE -->
@@ -97,6 +97,7 @@
   <section id="projects">
     <h2>Projects</h2>
 
+    <div class="fade">
     <div id="slidy-container">
 
       <figure id="slidy">
@@ -105,10 +106,11 @@
         <img src="images/ChatApp.png" data-caption="Group Chat App - React Native, Firebase">
         <img src="images/Weatherapp1.png" data-caption="Weather App - Kotlin">
         <img src="images/MovieApp.png" data-caption="Movie App - Java, Firebase">
-    
+
       </figure>
 
     </div>
+  </div>
 
   </section>
 
@@ -117,7 +119,7 @@
   <section id="contact">
     <h2>Contact Me</h2>
 
-    <div class="container">
+    <div class="container fade">
       <form method="post" action="https://formspree.io/f/moqyqnva">
         <label for="fname">Name</label>
         <input type="text" id="fname" name="name" placeholder="Your name...">

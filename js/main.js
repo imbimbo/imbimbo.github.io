@@ -45,3 +45,22 @@ $(document).ready(function() {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+  const options = {
+    threshold: 0.5
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fadeIn');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, options);
+
+  const elementsToObserve = document.querySelectorAll('.fade');
+  elementsToObserve.forEach(element => {
+    observer.observe(element);
+  });
+});
