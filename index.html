@@ -3,143 +3,192 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Felipe Imbimbo</title>
+  <title>Felipe Imbimbo | Full-stack Developer</title>
+  <meta name="description" content="Felipe Imbimbo is a full-stack developer building web products with Ruby on Rails. Open to freelance work.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/divider.css">
-  <link rel="stylesheet" href="css/hello.css">
-  <link rel="stylesheet" href="css/footer.css">
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/604bf6f38b.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
   <script src="js/main.js"></script>
-  <script src="js/intro_hello.js"></script>
-
-  <meta name="viewport" content="width=device-width">
+  <script src="js/i18n.js"></script>
 </head>
 
 <body>
 
+  <div class="lang-switch" role="group" aria-label="Language">
+    <button type="button" class="lang-btn is-active" data-lang="en" aria-pressed="true" aria-label="English" title="English">
+      <svg class="lang-flag" viewBox="0 0 60 40" aria-hidden="true">
+        <rect width="60" height="40" fill="#012169"/>
+        <path d="M0,0 L60,40 M60,0 L0,40" stroke="#fff" stroke-width="8"/>
+        <path d="M0,0 L60,40 M60,0 L0,40" stroke="#C8102E" stroke-width="5"/>
+        <path d="M30,0 V40 M0,20 H60" stroke="#fff" stroke-width="14"/>
+        <path d="M30,0 V40 M0,20 H60" stroke="#C8102E" stroke-width="8"/>
+      </svg>
+    </button>
+    <button type="button" class="lang-btn" data-lang="pt" aria-pressed="false" aria-label="Português" title="Português">
+      <svg class="lang-flag" viewBox="0 0 60 40" aria-hidden="true">
+        <rect width="24" height="40" fill="#006600"/>
+        <rect x="24" width="36" height="40" fill="#FF0000"/>
+        <circle cx="24" cy="20" r="7.5" fill="#FFCC00"/>
+        <circle cx="24" cy="20" r="5.2" fill="#003399"/>
+        <rect x="21.2" y="16.2" width="5.6" height="7.6" fill="#fff"/>
+        <rect x="22.2" y="17.2" width="3.6" height="5.6" fill="#003399"/>
+      </svg>
+    </button>
+  </div>
+
   <section id="home">
-    <!-- MENU -->
     <nav>
-      <button class="icon" id="icon">
+      <button class="icon" id="icon" data-i18n-aria="openMenu" aria-label="Open menu">
         <i class="fas fa-bars"></i>
       </button>
 
       <ul class="nav-ul fade" id="nav-ul">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact Me</a></li>
+        <li><a href="#home" data-i18n="navHome">Home</a></li>
+        <li><a href="#about" data-i18n="navAbout">About</a></li>
+        <li><a href="#projects" data-i18n="navProjects">Projects</a></li>
+        <li><a href="#contact" data-i18n="navContact">Contact</a></li>
       </ul>
-      <a href="#home"><i class="fas fa-angle-up" id="homeBtn"></i></a>
-
+      <a href="#home" data-i18n-aria="backToTop" aria-label="Back to top"><i class="fas fa-angle-up" id="homeBtn"></i></a>
     </nav>
 
-    <!-- HOME PAGE -->
-    <div class="hello fade">
-      <span is="type-async" id="type-text">...</span>
-      <span class="blinking-cursor">_</span>
-    </div>
-
-  </section>
-
-  <!-- ABOUT ME PAGE -->
-  <b class="hr anim"></b>
-  <section id="about">
-    <h2>About Me</h2>
-    <div class="containerAbout">
-    <div class="containerPerfil">
-
-      <img src="images/perfil.png" id="perfilImg" alt="">
-
-
-
-    <div class="contentHome fade">
-
-      <p>I am an <b>IT</b> passionate and a former<br> <b>mobile developer</b>. Currently mastering <b>Ruby
-        On Rails</b> but still finding my way as a <b>developer</b>.</p>
-
-    </div>
-
-
-    <div class="socialMedia fade">
-
-      <a href="https://linkedin.com/in/felipe-imbimbo-575b4911b" target="_blank">
-        <i class="fab fa-linkedin" style="color:#0e76a8"></i></a>
-      <a href="https://github.com/imbimbo" target="_blank">
-        <i class="fab fa-github-square" style="color:#6cc644"></i></a>
+    <div class="hero fade">
+      <p class="hero-kicker" data-i18n="heroKicker">Full-stack developer</p>
+      <h1 class="hero-name">Felipe Imbimbo</h1>
+      <p class="hero-pitch" data-i18n="heroPitch">I build web products with Ruby on Rails, from SaaS platforms to marketing sites and side apps friends actually use.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects" data-i18n="viewProjects">View projects</a>
+        <a class="btn btn-whatsapp" href="https://wa.me/5511915836025" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> <span data-i18n="contactMe">WhatsApp</span></a>
       </div>
     </div>
-
-  </div>
-
-  <div id="mySidenav" class="sidenav">
-    <a href="#about" id="stack1">My Mobile Stack
-    <br>
-    <i class="devicon-react-original colored"></i>
-    <i class="devicon-firebase-plain-wordmark colored"></i>
-  </a>
-    <a href="#about" id="stack2">My Web Dev Stack
-      <br>
-      <i class="devicon-ruby-plain-wordmark colored"></i>
-      <i class="devicon-rails-plain-wordmark colored"></i>
-      <i class="devicon-javascript-plain colored"></i>
-      <i class="devicon-postgresql-plain colored"></i>
-
-    </a>
-
   </section>
 
-  <!-- PROJECTS PAGE -->
+  <b class="hr anim"></b>
+  <section id="about">
+    <h2 data-i18n="aboutTitle">About</h2>
+    <div class="containerAbout">
+      <div class="containerPerfil">
+        <img src="images/perfil.jpg" id="perfilImg" alt="Portrait of Felipe Imbimbo">
+
+        <div class="contentHome fade">
+          <p data-i18n-html="aboutBody">Former <b>mobile developer</b> turned full-stack. I help teams ship reliable web products and <b>SaaS</b> platforms like political ops tools, brand sites, and product experiments, with <b>Ruby on Rails</b> and modern JavaScript.</p>
+        </div>
+
+        <ul class="skill-tags fade" data-i18n-aria="skillsLabel" aria-label="Skills">
+          <li>Ruby on Rails</li>
+          <li>JavaScript</li>
+          <li>PostgreSQL</li>
+          <li>React Native</li>
+          <li>Firebase</li>
+          <li>HTML &amp; CSS</li>
+        </ul>
+
+        <div class="socialMedia fade">
+          <a href="https://linkedin.com/in/felipe-imbimbo-575b4911b" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fab fa-linkedin" style="color:#0e76a8"></i></a>
+          <a href="https://github.com/imbimbo" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i class="fab fa-github-square" style="color:#6cc644"></i></a>
+          <a href="https://wa.me/5511915836025" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp" style="color:#25D366"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <b class="hr anim"></b>
   <section id="projects">
-    <h2>Projects</h2>
+    <h2 data-i18n="projectsTitle">Projects</h2>
 
-    <div class="fade">
-    <div id="slidy-container">
+    <div class="projects-grid fade">
+      <article class="project-card">
+        <a class="project-media" href="https://www.mygabinete.com.br/" target="_blank" rel="noopener noreferrer">
+          <img src="images/projects/mygabinete.jpg" alt="My Gabinete website screenshot">
+        </a>
+        <div class="project-body">
+          <h3>My Gabinete</h3>
+          <p data-i18n="projectMyGabinete">Platform for political offices: track demands, generate official letters, and follow budget amendments in one place.</p>
+          <ul class="skill-tags skill-tags-dark">
+            <li>Ruby on Rails</li>
+            <li>PostgreSQL</li>
+            <li>JavaScript</li>
+          </ul>
+          <a class="project-link" href="https://www.mygabinete.com.br/" target="_blank" rel="noopener noreferrer"><span data-i18n="visitSite">Visit site</span> <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </article>
 
-      <figure id="slidy">
-        <img src="images/unite-social.png" data-caption="Event Manager App - Ruby On Rails, Bootstrap/Sass and Heroku">
-        <img src="images/unite-port.png" data-caption="E-Commerce - Ruby On Rails, Bootstrap and Heroku">
-        <img src="images/ChatApp.png" data-caption="Group Chat App - React Native, Firebase">
-        <img src="images/Weatherapp1.png" data-caption="Weather App - Kotlin">
-        <img src="images/MovieApp.png" data-caption="Movie App - Java, Firebase">
+      <article class="project-card">
+        <a class="project-media" href="https://www.zeus-comunicacao.com/" target="_blank" rel="noopener noreferrer">
+          <img src="images/projects/zeus.jpg" alt="Zeus Comunicação website screenshot">
+        </a>
+        <div class="project-body">
+          <h3>Zeus Comunicação</h3>
+          <p data-i18n="projectZeus">Marketing site for a strategic communication agency focused on political branding and reputation.</p>
+          <ul class="skill-tags skill-tags-dark">
+            <li>JavaScript</li>
+            <li>HTML &amp; CSS</li>
+          </ul>
+          <a class="project-link" href="https://www.zeus-comunicacao.com/" target="_blank" rel="noopener noreferrer"><span data-i18n="visitSite">Visit site</span> <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </article>
 
-      </figure>
-
+      <article class="project-card">
+        <a class="project-media" href="https://www.p1grid.com/" target="_blank" rel="noopener noreferrer">
+          <img src="images/projects/p1grid.jpg" alt="P1GRID website screenshot">
+        </a>
+        <div class="project-body">
+          <h3>P1GRID</h3>
+          <p data-i18n="projectP1grid">App where friends bet on Formula 1 races against each other, with calendar, live races, rankings, and chat.</p>
+          <ul class="skill-tags skill-tags-dark">
+            <li>Ruby on Rails</li>
+            <li>JavaScript</li>
+            <li>PostgreSQL</li>
+          </ul>
+          <a class="project-link" href="https://www.p1grid.com/" target="_blank" rel="noopener noreferrer"><span data-i18n="visitSite">Visit site</span> <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </article>
     </div>
-  </div>
-
   </section>
 
-  <!-- CONTACT ME PAGE -->
   <b class="hr anim"></b>
   <section id="contact">
-    <h2>Contact Me</h2>
+    <h2 data-i18n="contactTitle">Contact</h2>
+
+    <div class="contact-intro fade">
+      <p class="availability" data-i18n="availability">Open to freelance</p>
+      <p data-i18n-html="contactBody">Have a product idea or need a Rails developer? Send a message, reach me on <a href="https://linkedin.com/in/felipe-imbimbo-575b4911b" target="_blank" rel="noopener noreferrer">LinkedIn</a>, or chat on <a href="https://wa.me/5511915836025" target="_blank" rel="noopener noreferrer">WhatsApp</a>.</p>
+    </div>
 
     <div class="container fade">
       <form method="post" action="https://formspree.io/f/moqyqnva">
-        <label for="fname">Name</label>
-        <input type="text" id="fname" name="name" placeholder="Your name...">
+        <label for="fname" data-i18n="labelName">Name</label>
+        <input type="text" id="fname" name="name" data-i18n-placeholder="placeholderName" placeholder="Your name..." required>
 
-        <label for="lname">Email</label>
-        <input type="text" id="femail" name="email" placeholder="Your email...">
+        <label for="femail" data-i18n="labelEmail">Email</label>
+        <input type="email" id="femail" name="email" data-i18n-placeholder="placeholderEmail" placeholder="Your email..." required>
 
+        <label for="message" data-i18n="labelMessage">Message</label>
+        <textarea id="message" name="message" data-i18n-placeholder="placeholderMessage" placeholder="Write something..." style="height:150px" required></textarea>
 
-        <label for="subject">Message</label>
-        <textarea id="email" name="message" placeholder="Write something..." style="height:150px"></textarea>
-
-        <input type="submit" value="Submit">
+        <input type="submit" data-i18n-value="sendMessage" value="Send message">
       </form>
     </div>
-
-
   </section>
-  <script src="js/carousel.js"></script>
 
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Felipe Imbimbo</p>
+    <div class="footer-social">
+      <a href="https://linkedin.com/in/felipe-imbimbo-575b4911b" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/imbimbo" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a class="footer-whatsapp" href="https://wa.me/5511915836025" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
-
 
 </html>

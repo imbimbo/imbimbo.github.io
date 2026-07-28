@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Spartan&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 /*------CSS RESET------*/
@@ -12,27 +12,38 @@ html {
   scroll-behavior: smooth;
 }
 
-
 div,
 section,
 span,
 ul,
 li,
 a,
-header {
+header,
+article,
+footer {
   box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #f7f7f7;
 }
 
 /*------BODY------*/
 section {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
+  padding-bottom: 64px;
 }
-
 
 #home {
   background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding-bottom: 0;
 }
 
 #about {
@@ -45,11 +56,15 @@ section {
 
 #contact {
   background-color: #000000;
+  min-height: auto;
+  padding-bottom: 80px;
 }
 
 /*------MENU------*/
 nav {
   position: absolute;
+  top: 0;
+  left: 0;
   z-index: 999;
   width: 100%;
   display: flex;
@@ -64,8 +79,9 @@ nav {
   color: white;
   font-size: 44px;
   outline: none;
-  padding: 8px 12px 8px 12px;
+  padding: 8px 12px;
   z-index: 1000;
+  cursor: pointer;
 }
 
 #homeBtn {
@@ -75,30 +91,20 @@ nav {
   font-size: 50px;
   padding-right: 40px;
   padding-top: 10px;
+  color: #111;
   animation-name: shadow;
   animation-duration: 3s;
   animation-iteration-count: infinite;
 }
 
 @keyframes shadow {
-  33% {
-    color: #FF0066;
-  }
-
-  66% {
-    color: #7030a0;
-  }
-
-  100% {
-    color: #00c6bb;
-  }
+  33% { color: #FF0066; }
+  66% { color: #7030a0; }
+  100% { color: #00c6bb; }
 }
 
 #homeBtn:hover {
   text-shadow: 0px 0px 4px #777777;
-  -moz-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
-  -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
 
@@ -122,12 +128,134 @@ nav {
   padding: 20px 0;
 }
 
-/*------HOME------*/
+/*------LANGUAGE SWITCH------*/
+.lang-switch {
+  position: fixed;
+  top: 18px;
+  right: 96px;
+  z-index: 1001;
+  display: inline-flex;
+  gap: 8px;
+  background: transparent;
+}
 
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  line-height: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  opacity: 0.55;
+}
+
+.lang-flag {
+  width: 24px;
+  height: 16px;
+  display: block;
+}
+
+.lang-btn.is-active,
+.lang-btn:hover {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+/*------HERO------*/
+.hero {
+  width: min(720px, 88%);
+  margin: 0 auto;
+  text-align: center;
+  padding: 120px 0 80px;
+}
+
+.hero-kicker {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #00c6bb;
+  margin-bottom: 16px;
+}
+
+.hero-name {
+  font-family: 'League Spartan', 'Spartan', sans-serif;
+  font-size: clamp(2.8rem, 8vw, 5rem);
+  font-weight: 700;
+  color: #111;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.hero-pitch {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  line-height: 1.6;
+  color: #333;
+  font-weight: 300;
+  max-width: 34em;
+  margin: 0 auto 32px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 2px solid #111;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-primary {
+  background: #00c6bb;
+  border-color: #00c6bb;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #7030a0;
+  border-color: #7030a0;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: #111;
+}
+
+.btn-ghost:hover {
+  background: #111;
+  color: #fff;
+}
+
+.btn-whatsapp {
+  background: #25D366;
+  border-color: #25D366;
+  color: #fff;
+  gap: 8px;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe57;
+  border-color: #1ebe57;
+  color: #fff;
+}
 
 /*------ABOUT ME------*/
-
-#about h2 {
+#about h2,
+#contact h2 {
   color: #ffffff;
 }
 
@@ -145,16 +273,22 @@ nav {
 }
 
 #perfilImg {
-  height: 150px;
-  width: auto;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
+  border: 3px solid #00c6bb;
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 32px;
+  display: block;
 }
 
 .socialMedia {
   display: flex;
-  justify-content: flex-end;
-
+  justify-content: center;
+  margin-top: 8px;
 }
 
 .socialMedia a {
@@ -164,60 +298,51 @@ nav {
 }
 
 .socialMedia a:hover {
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 
 .contentHome {
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 12%;
+  padding-right: 12%;
 }
 
-p {
+#about .contentHome p {
   font-family: 'Montserrat', sans-serif;
-  color: rgb(255, 255, 255);
-  font-size: 28px;
-  font-weight: 100;
+  color: #fff;
+  font-size: clamp(1.1rem, 2.4vw, 1.6rem);
+  font-weight: 300;
   text-align: center;
-  line-height: 50px;
+  line-height: 1.6;
 }
 
-b {
-  font-size: 30px;
+#about .contentHome b {
+  font-size: 1.05em;
+  font-weight: 600;
 }
 
-#mySidenav a {
-  position: absolute;
-  left: -360px;
-  transition: 0.3s;
-  padding: 15px;
-  width: 400px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 30px;
-  color: rgb(0, 0, 0);
-  border-radius: 0 20px 20px 0;
-  font-family: 'Montserrat', sans-serif;
+.skill-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 28px 0 20px;
+  max-width: 640px;
+  padding: 0 16px;
 }
 
-.sidenav i {
-  font-size: 60px;
-  margin: 6px;
+.skill-tags li {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.85rem;
+  padding: 8px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #fff;
 }
 
-#mySidenav a:hover {
-  left: 0;
-}
-
-#stack1 {
-  top: 160px;
-  background-color: #6cc644;
-}
-
-#stack2 {
-  top: 200px;
-  background-color: #f7f7f7;
+.skill-tags-dark li {
+  border-color: #111;
+  color: #111;
+  background: #fff;
 }
 
 .fade {
@@ -231,29 +356,133 @@ b {
 
 /*------PROJECTS------*/
 h2 {
-  font-family: 'Spartan', sans-serif;
+  font-family: 'League Spartan', 'Spartan', sans-serif;
   font-size: 30px;
   color: #000000;
   display: flex;
-  flex: 2;
   justify-content: center;
-  padding: 40px;
+  padding: 40px 20px 28px;
 }
 
-#slidy-container {
-  width: 60%;
+.projects-grid {
+  width: min(980px, 92%);
   margin: 0 auto;
+  display: grid;
+  gap: 28px;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 0;
+  border: 2px solid #111;
+  background: #fff;
   overflow: hidden;
 }
 
+.project-media {
+  display: block;
+  background: #111;
+  min-height: 220px;
+}
+
+.project-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.project-body {
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+.project-body h3 {
+  font-family: 'League Spartan', 'Spartan', sans-serif;
+  font-size: 1.5rem;
+  color: #111;
+}
+
+.project-body p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: #333;
+  font-weight: 400;
+}
+
+.project-body .skill-tags {
+  justify-content: flex-start;
+  margin: 4px 0 8px;
+  padding: 0;
+}
+
+.project-link {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.95rem;
+  color: #00c6bb;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.project-link:hover {
+  color: #7030a0;
+}
+
+.project-link i {
+  font-size: 0.8rem;
+  transition: transform 0.2s ease;
+}
+
+.project-link:hover i {
+  transform: translateX(4px);
+}
 
 /*------CONTACT------*/
-#contact h2 {
-  color: #ffffff;
+.contact-intro {
+  width: min(560px, 88%);
+  margin: 0 auto 28px;
+  text-align: center;
+}
 
+.availability {
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #00c6bb;
+  border: 1px solid #00c6bb;
+  padding: 8px 14px;
+  margin-bottom: 16px;
+}
+
+.contact-intro p:last-child {
+  font-family: 'Montserrat', sans-serif;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.contact-intro a {
+  color: #00c6bb;
+  text-decoration: none;
+}
+
+.contact-intro a:hover {
+  color: #fff;
 }
 
 input[type=text],
+input[type=email],
 select,
 textarea {
   width: 100%;
@@ -264,6 +493,12 @@ textarea {
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
+  font-family: 'Montserrat', sans-serif;
+}
+
+label {
+  font-family: 'Roboto', sans-serif;
+  color: #111;
 }
 
 input[type=submit] {
@@ -273,6 +508,8 @@ input[type=submit] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
 }
 
 input[type=submit]:hover {
@@ -286,16 +523,46 @@ input[type=submit]:hover {
   padding: 20px;
   margin-left: auto;
   margin-right: auto;
-  width: 500px;
+  width: min(500px, 90%);
+}
+
+/*------FOOTER------*/
+.site-footer {
+  background: #111;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 40px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-social a {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.footer-social a:hover {
+  color: #00c6bb;
+}
+
+.footer-whatsapp {
+  color: #25D366;
+}
+
+.footer-whatsapp:hover {
+  color: #1ebe57;
 }
 
 /*------MOBILE VERSION------*/
 @media screen and (max-width: 768px) {
-
-  html {
-    scroll-behavior: smooth;
-  }
-
   nav {
     position: fixed;
   }
@@ -306,15 +573,15 @@ input[type=submit]:hover {
     flex-direction: column;
     width: 100%;
     align-items: center;
-    margin-top: 0px;
+    margin-top: 0;
     padding: 10px;
     box-shadow: 0px 0px 8px 2px #ffffff;
-    margin-right: 0px;
-    margin-left: -65px;
+    margin-right: 0;
+    margin-left: 0;
   }
 
   .nav-ul li {
-    padding: 0px;
+    padding: 0;
     margin: 5px;
   }
 
@@ -328,75 +595,77 @@ input[type=submit]:hover {
     margin-bottom: auto;
   }
 
-  .homeImg {
-    display: inline;
+  .lang-switch {
+    top: 14px;
+    right: 72px;
+    gap: 6px;
   }
 
-  h1 {
-    font-size: 38px;
-    padding-bottom: 20px;
+  .lang-flag {
+    width: 22px;
+    height: 14px;
+  }
+
+  .hero {
+    padding: 110px 0 60px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
   }
 
   #perfilImg {
-    height: 115px;
-    width: auto;
-    display: flex;
-    margin-top: 0;
-    margin-left: auto;
-    margin-right: auto;
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 24px;
   }
 
   .socialMedia a {
     font-size: 20px;
   }
 
-  p {
-    font-size: 22px;
-    line-height: 40px;
-    text-align: center;
+  .contentHome {
+    padding: 0 24px;
   }
 
-  b {
-    font-size: 24px;
+  .project-card {
+    grid-template-columns: 1fr;
   }
 
+  .project-media {
+    min-height: 180px;
+    max-height: 220px;
+  }
+
+  .project-body {
+    padding: 20px;
+  }
 
   .container {
-    margin-top: 30px;
+    margin-top: 10px;
     width: 90%;
-    height: auto;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px 20px;
+    text-align: center;
   }
 }
 
-/*------MOBILE VERSION SMALLer------*/
 @media screen and (max-width: 370px) {
-
-  h1 {
-    font-size: 36px;
+  .hero-name {
+    font-size: 2.4rem;
   }
 
   #perfilImg {
-    height: 100px;
-    width: auto;
+    width: 120px;
+    height: 120px;
   }
 
   .contentHome {
-    padding: 0 25px 0 25px;
-  }
-
-  p {
-    font-size: 20px;
-    line-height: 30px;
-  }
-
-  b {
-    font-size: 22px;
-  }
-
-
-  .container {
-    margin-top: -10px;
-    width: 90%;
-    height: auto;
+    padding: 0 16px;
   }
 }
