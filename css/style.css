@@ -488,31 +488,27 @@ h2 {
 }
 
 .project-body {
-  padding: 20px 24px;
+  padding: 28px 32px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
   min-height: 0;
   overflow: hidden;
 }
 
 .project-body h3 {
   font-family: 'League Spartan', 'Spartan', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: #111;
 }
 
 .project-body p {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.95rem;
-  line-height: 1.5;
+  line-height: 1.55;
   color: #333;
   font-weight: 400;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
-  overflow: hidden;
 }
 
 .project-body .skill-tags {
@@ -748,13 +744,7 @@ input[type=submit]:hover {
   }
 
   .project-body {
-    padding: 16px 18px;
-    gap: 8px;
-  }
-
-  .project-body p {
-    -webkit-line-clamp: 3;
-    font-size: 0.9rem;
+    padding: 20px;
   }
 
   .container {
