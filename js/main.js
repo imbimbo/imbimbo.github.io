@@ -54,6 +54,10 @@ document.addEventListener("DOMContentLoaded", function() {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('fadeIn');
+        if (typeof Flickity !== 'undefined' && entry.target.classList.contains('js-flickity')) {
+          var flkty = Flickity.data(entry.target);
+          if (flkty) flkty.resize();
+        }
         observer.unobserve(entry.target);
       }
     });

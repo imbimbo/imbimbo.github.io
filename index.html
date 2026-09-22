@@ -9,6 +9,7 @@
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/divider.css">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/604bf6f38b.js" crossorigin="anonymous"></script>
@@ -103,56 +104,81 @@
   <section id="projects">
     <h2 data-i18n="projectsTitle">Projects</h2>
 
-    <div class="projects-grid fade">
-      <article class="project-card">
-        <a class="project-media" href="https://www.mygabinete.com.br/" target="_blank" rel="noopener noreferrer">
-          <img src="images/projects/mygabinete.jpg" alt="My Gabinete website screenshot">
-        </a>
-        <div class="project-body">
-          <h3>My Gabinete</h3>
-          <p data-i18n="projectMyGabinete">Platform for political offices: track demands, generate official letters, and follow budget amendments in one place.</p>
-          <ul class="skill-tags skill-tags-dark">
-            <li><i class="fas fa-gem" aria-hidden="true"></i> Ruby on Rails</li>
-            <li><i class="fas fa-database" aria-hidden="true"></i> PostgreSQL</li>
-            <li><i class="fab fa-js" aria-hidden="true"></i> JavaScript</li>
-            <li><i class="fas fa-palette" aria-hidden="true"></i> Tailwind CSS</li>
-          </ul>
-          <a class="project-link" href="https://www.mygabinete.com.br/" target="_blank" rel="noopener noreferrer"><span data-i18n="visitSite">Visit site</span> <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </article>
+    <div class="gallery js-flickity fade"
+      data-flickity-options='{ "wrapAround": true, "cellAlign": "center" }'>
+      <div class="gallery-cell">
+        <article class="project-card">
+          <a class="project-media" href="https://imbimbo.github.io/styllus/" target="_blank" rel="noopener noreferrer">
+            <img src="images/projects/styllus.jpg" alt="Styllus Contábil website screenshot">
+          </a>
+          <div class="project-body">
+            <h3>Styllus Contábil</h3>
+            <p data-i18n="projectStyllus">Marketing website with blog for an accounting firm, built for clear messaging, lead capture, and content publishing.</p>
+            <ul class="skill-tags skill-tags-dark">
+              <li><i class="fas fa-rocket" aria-hidden="true"></i> Astro</li>
+              <li><i class="fas fa-code" aria-hidden="true"></i> TypeScript</li>
+              <li><i class="fab fa-react" aria-hidden="true"></i> React</li>
+            </ul>
+            <a class="project-link" href="https://imbimbo.github.io/styllus/" target="_blank" rel="noopener noreferrer"><span data-i18n="visitSite">Visit site</span> <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
 
-      <article class="project-card">
-        <a class="project-media" href="https://www.zeus-comunicacao.com/" target="_blank" rel="noopener noreferrer">
-          <img src="images/projects/zeus.jpg" alt="Zeus Comunicação website screenshot">
-        </a>
-        <div class="project-body">
-          <h3>Zeus Comunicação</h3>
-          <p data-i18n="projectZeus">Marketing site for a strategic communication agency focused on political branding and reputation.</p>
-          <ul class="skill-tags skill-tags-dark">
-            <li><i class="fab fa-js" aria-hidden="true"></i> JavaScript</li>
-            <li><i class="fab fa-html5" aria-hidden="true"></i> HTML &amp; CSS</li>
-            <li><i class="fas fa-palette" aria-hidden="true"></i> Tailwind CSS</li>
-          </ul>
-          <a class="project-link" href="https://www.zeus-comunicacao.com/" target="_blank" rel="noopener noreferrer"><span data-i18n="visitSite">Visit site</span> <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </article>
+      <div class="gallery-cell">
+        <article class="project-card">
+          <a class="project-media" href="https://www.mygabinete.com.br/" target="_blank" rel="noopener noreferrer">
+            <img src="images/projects/mygabinete.jpg" alt="My Gabinete website screenshot">
+          </a>
+          <div class="project-body">
+            <h3>My Gabinete</h3>
+            <p data-i18n="projectMyGabinete">Platform for political offices: track demands, generate official letters, and follow budget amendments in one place.</p>
+            <ul class="skill-tags skill-tags-dark">
+              <li><i class="fas fa-gem" aria-hidden="true"></i> Ruby on Rails</li>
+              <li><i class="fas fa-database" aria-hidden="true"></i> PostgreSQL</li>
+              <li><i class="fab fa-js" aria-hidden="true"></i> JavaScript</li>
+              <li><i class="fas fa-palette" aria-hidden="true"></i> Tailwind CSS</li>
+            </ul>
+            <a class="project-link" href="https://www.mygabinete.com.br/" target="_blank" rel="noopener noreferrer"><span data-i18n="visitSite">Visit site</span> <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
 
-      <article class="project-card">
-        <a class="project-media" href="https://www.p1grid.com/" target="_blank" rel="noopener noreferrer">
-          <img src="images/projects/p1grid.jpg" alt="P1GRID website screenshot">
-        </a>
-        <div class="project-body">
-          <h3>P1GRID</h3>
-          <p data-i18n="projectP1grid">App where friends bet on Formula 1 races against each other, with calendar, live races, rankings, and chat.</p>
-          <ul class="skill-tags skill-tags-dark">
-            <li><i class="fas fa-gem" aria-hidden="true"></i> Ruby on Rails</li>
-            <li><i class="fab fa-js" aria-hidden="true"></i> JavaScript</li>
-            <li><i class="fas fa-database" aria-hidden="true"></i> PostgreSQL</li>
-            <li><i class="fas fa-palette" aria-hidden="true"></i> Tailwind CSS</li>
-          </ul>
-          <a class="project-link" href="https://www.p1grid.com/" target="_blank" rel="noopener noreferrer"><span data-i18n="visitSite">Visit site</span> <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </article>
+      <div class="gallery-cell">
+        <article class="project-card">
+          <a class="project-media" href="https://www.zeus-comunicacao.com/" target="_blank" rel="noopener noreferrer">
+            <img src="images/projects/zeus.jpg" alt="Zeus Comunicação website screenshot">
+          </a>
+          <div class="project-body">
+            <h3>Zeus Comunicação</h3>
+            <p data-i18n="projectZeus">Marketing site for a strategic communication agency focused on political branding and reputation.</p>
+            <ul class="skill-tags skill-tags-dark">
+              <li><i class="fab fa-js" aria-hidden="true"></i> JavaScript</li>
+              <li><i class="fab fa-html5" aria-hidden="true"></i> HTML &amp; CSS</li>
+              <li><i class="fas fa-palette" aria-hidden="true"></i> Tailwind CSS</li>
+            </ul>
+            <a class="project-link" href="https://www.zeus-comunicacao.com/" target="_blank" rel="noopener noreferrer"><span data-i18n="visitSite">Visit site</span> <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="gallery-cell">
+        <article class="project-card">
+          <a class="project-media" href="https://www.p1grid.com/" target="_blank" rel="noopener noreferrer">
+            <img src="images/projects/p1grid.jpg" alt="P1GRID website screenshot">
+          </a>
+          <div class="project-body">
+            <h3>P1GRID</h3>
+            <p data-i18n="projectP1grid">App where friends bet on Formula 1 races against each other, with calendar, live races, rankings, and chat.</p>
+            <ul class="skill-tags skill-tags-dark">
+              <li><i class="fas fa-gem" aria-hidden="true"></i> Ruby on Rails</li>
+              <li><i class="fab fa-js" aria-hidden="true"></i> JavaScript</li>
+              <li><i class="fas fa-database" aria-hidden="true"></i> PostgreSQL</li>
+              <li><i class="fas fa-palette" aria-hidden="true"></i> Tailwind CSS</li>
+            </ul>
+            <a class="project-link" href="https://www.p1grid.com/" target="_blank" rel="noopener noreferrer"><span data-i18n="visitSite">Visit site</span> <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -193,6 +219,7 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </body>
 
 </html>
